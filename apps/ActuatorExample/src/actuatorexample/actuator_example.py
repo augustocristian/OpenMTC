@@ -14,7 +14,7 @@ from openmtc_onem2m.model import AE, Container
 # gevent need for event processing
 import gevent
 
-class ActualtorExample(XAE):
+class ActuatorExample(XAE):
     
     def _on_register(self):
         # create the actuator container as a base
