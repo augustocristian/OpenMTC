@@ -28,14 +28,14 @@ class LogicExample(XAE):
         self.run_forever()
 
     def handle_sensor_data(self, cnt, con):
-        print "received sensor data", con
+        print ("received sensor data", con)
         # convert the con to floating point value
         data = float(con)
         # apply the logic
         if data > 30:
-            print "sensor data greater than 30"
-            print "push data to actuator data in container"
+            print ("sensor data greater than 30")
+            print ("push data to actuator data in container")
             self.push_content(self.actuator_data_in, con)
 
     def handle_actuator_data_out(self, cnt, con):
-        print "actuator pushed data_out", con
+        print ("actuator pushed data_out", con)
