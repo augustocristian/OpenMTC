@@ -3,7 +3,7 @@ from signal import SIGTERM, SIGINT
 import gevent.signal
 from gevent import spawn_later
 from gevent.event import Event as GEventEvent
-
+import signal
 from futile.logging import LoggerMixin
 
 
@@ -35,8 +35,8 @@ class AppRunner(LoggerMixin):
         self.m2m_app.run(self, self.m2m_ep)
 
         shutdown_event = GEventEvent()
-        gevent.signal(SIGTERM, shutdown_event.set)
-        gevent.signal(SIGINT, shutdown_event.set)
+        signal.signal(signal.SIGTERM, shutdown_event.set)
+        signal.signal(signal.SIGINT, shutdown_event.set)
         shutdown_event.wait()
 
     def _shutdown_app(self):
