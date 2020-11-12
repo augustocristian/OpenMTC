@@ -20,9 +20,9 @@ parser.add_argument("-s", "--ep", help="URL of the local Endpoint.")
 args, config = prepare_app(parser, __loader__, __name__, "config.json")
 
 # variables
-nm = get_value("name", (unicode, str), default_name, args, config)
+nm = get_value("name",  str, default_name, args, config)
 cb = config.get("cse_base", "onem2m")
-ep = get_value("ep", (unicode, str), default_ep, args, config)
+ep = get_value("ep", str, default_ep, args, config)
 poas = config.get("poas", ["http://auto:24545"])
 originator_pre = config.get("originator_pre", "//openmtc.org/mn-cse-1")
 ssl_certs = config.get("ssl_certs", {})

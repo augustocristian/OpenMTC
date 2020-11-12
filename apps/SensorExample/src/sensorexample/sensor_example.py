@@ -46,15 +46,15 @@ class SensorExample(XAE):
         data = 0
         while(True):
             data = numpy.random.uniform(low=0, high=100, size=None)
-            print "generating data", data
+            print ("generating data", data)
             # convert the data to string because thats how data should be pushed
             # container
             to_send = str(data)
-            print "sending data"
+            print ("sending data")
             self.push_content(_data_cnt, to_send)
             # sleep for 5 seconds
-            print "sleeping for 5 seconds"
+            print ("sleeping for 5 seconds")
             gevent.sleep(5)
 
     def handle_sensor_data(self, cnt, con):
-        print "sensor received data", con
+        print ("sensor received data", con)
