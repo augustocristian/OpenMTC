@@ -6,4 +6,4 @@ cd $(dirname ${0})
 
 cd LogicExample
 
-PYTHONPATH=${PYTHONPATH}:src exec python -m logicexample $@
+PYTHONPATH=${PYTHONPATH}:src exec python3 -m logicexample $@
