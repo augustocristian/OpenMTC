@@ -44,12 +44,12 @@ class ActualtorExample(XAE):
 
     def handle_actuator_data_in(self, cnt, con):
         data = con
-        print "actuator received data on data_in ", data
+        print ("actuator received data on data_in ", data)
         # the action of actuator is to wait for 3 seconds after it receives an input
         gevent.sleep(3)
-        print "actuator sending data via data_out ", data
+        print ("actuator sending data via data_out ", data)
         self.push_content(self.data_out, data)
 
     def handle_actuator_data_out(self, cnt, con):
         data = con
-        print "actuator received data on data_out ", data
+        print ("actuator received data on data_out ", data)

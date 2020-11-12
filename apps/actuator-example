@@ -6,4 +6,4 @@ cd $(dirname ${0})
 
 cd ActuatorExample
 
-PYTHONPATH=${PYTHONPATH}:src exec python -m actuatorexample $@
+PYTHONPATH=${PYTHONPATH}:src exec python3 -m actuatorexample $@

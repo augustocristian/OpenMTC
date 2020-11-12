@@ -6,4 +6,4 @@ cd $(dirname ${0})
 
 cd SensorExample
 
-PYTHONPATH=${PYTHONPATH}:src exec python -m sensorexample $@
+PYTHONPATH=${PYTHONPATH}:src exec python3 -m sensorexample $@
