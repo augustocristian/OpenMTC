@@ -35,7 +35,7 @@ class LogicExample(XAE):
         if data > 30:
             print ("sensor data greater than 30")
             print ("push data to actuator data in container")
-            self.push_content(self.actuator_data_in, [con])
+            self.push_content(self.actuator_data_in, data)
 
     def handle_actuator_data_out(self, cnt, con):
         print ("actuator pushed data_out", con)
