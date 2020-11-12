@@ -48,7 +48,7 @@ class ActuatorExample(XAE):
         # the action of actuator is to wait for 3 seconds after it receives an input
         gevent.sleep(3)
         print ("actuator sending data via data_out ", data)
-        self.push_content(self.data_out, data)
+        self.push_content(self.data_out, str(data))
 
     def handle_actuator_data_out(self, cnt, con):
         data = con
